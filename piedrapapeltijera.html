@@ -4,9 +4,20 @@
         <meta charset="utf-8" />
         <title>Piedra, papel o tijera</title>
         <script>
+            
+            //Generacion de la opcion del pc de forma aleatoria
+            function aleatoreo (Min, Max)
+            {
+                return Math.floor(Math.random()*(Max - Min + 1) + Min)
+            }
+
             //1 es piedra, 2 es papel y 3 es tijera.
             let PlayerOption = 0
-            let PcOption = 3
+            let PcOption = aleatoreo(1,3)
+            let Min = 1
+            let Max = 3
+
+            
             PlayerOption = prompt("Elige: 1|Piedra  2|Papel  3|Tijera")
             //Elecciones del jugador
             if(PlayerOption == 1)
@@ -59,7 +70,6 @@
             {
                 alert("Perdiste")
             }
-
         </script>
     </head>
     <body>
