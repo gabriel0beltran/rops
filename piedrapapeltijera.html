@@ -5,20 +5,19 @@
         <title>Piedra, papel o tijera</title>
         <script>
             //1 es piedra, 2 es papel y 3 es tijera.
-            let option = 0
-            let pc = 2
-            option = prompt("Elige: 1|Piedra  2|Papel  3|Tijera")
-            //alert("Elejiste " + option)
-            //Muestra la opción que se escoge
-            if(option == 1)
+            let PlayerOption = 0
+            let PcOption = 3
+            PlayerOption = prompt("Elige: 1|Piedra  2|Papel  3|Tijera")
+            //Elecciones del jugador
+            if(PlayerOption == 1)
             {
                 alert("Elegiste piedra")
             }
-            else if (option == 2)
+            else if (PlayerOption == 2)
             {
                 alert("Elegiste papel")
             }
-            else if (option == 3)
+            else if (PlayerOption == 3)
             {
                 alert("Elegiste tijera")
             }
@@ -26,6 +25,41 @@
             {
                 alert("La opción no se encuentra")
             } 
+            //Elecciones del pc
+            if(PcOption == 1)
+            {
+                alert("Pc elige piedra")
+            }
+            else if (PcOption == 2)
+            {
+                alert("Pc elige papel")
+            }
+            else if (PcOption == 3)
+            {
+                alert("Pc elige tijera")
+            }
+            //Combate
+            if(PcOption == PlayerOption)
+            {
+                alert("Empate")
+            } 
+            else if (PlayerOption == 1 && PcOption == 3)
+            {
+                alert("Ganaste")
+            }
+            else if (PlayerOption == 2 && PcOption == 1)
+            {
+                alert("Ganaste") 
+            }
+            else if (PlayerOption == 3 && PcOption == 2)
+            {
+                alert("Ganaste") 
+            }
+            else 
+            {
+                alert("Perdiste")
+            }
+
         </script>
     </head>
     <body>
